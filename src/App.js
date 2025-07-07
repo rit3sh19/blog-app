@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NewBlog from './pages/Newblog';
+import ColorTrail from './components/ColorTrail';
+import './output.css'; 
+import AllBlogs from './pages/AllBlogs';
+import Profile from './pages/Profile';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ColorTrail />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/blog" element={<NewBlog />} />
+          <Route path="/blogs" element={<AllBlogs />} />
+          <Route path="/profile" element={<Profile />} />
+          {/* Add more routes/pages here */}
+        </Routes>
+      </BrowserRouter>
+    </>
   );
-}
+};
 
 export default App;
