@@ -9,6 +9,7 @@ import {
   BookOpen,
   PlusCircle,
   PencilLine,
+  User
 } from 'lucide-react';
 
 const NewBlog = () => {
@@ -46,6 +47,7 @@ const NewBlog = () => {
         <SidebarItem icon={<BookOpen size={20} />} text="All Blogs" />
         <SidebarItem icon={<PlusCircle size={20} />} text="New Blog" active />
         <SidebarItem icon={<PencilLine size={20} />} text="Drafts" />
+        <SidebarItem icon={<User size={20} />} text="Profile" />
       </Sidebar>
 
       {/* Main Content */}
